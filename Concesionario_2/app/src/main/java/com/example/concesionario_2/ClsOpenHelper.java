@@ -17,7 +17,7 @@ public class ClsOpenHelper extends SQLiteOpenHelper {
         "not null,activo text not null default 'si')");
 
         db.execSQL("create table TblFactura(nro_factura text primary key," +
-        "fecha date not null,placa text not null,activo text " +
+        "fecha text not null,placa text not null,activo text " +
         "not null default 'si',constraint pk_factura " +
         "foreign key (placa) references TblVehiculo(placa))");
     }

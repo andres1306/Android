@@ -51,21 +51,21 @@ public class VehiculoActivity extends AppCompatActivity {
             registro.put("marca",marca);
             registro.put("modelo",modelo);
             registro.put("valor",Integer.parseInt(valor));
-            if (sw==0)
-                resp=db.insert("TblVehiculo",null,registro);
-            else {
-                resp = db.update("TblVehiculo",registro,"placa='" + placa + "'",null);
-                sw=0;
-            }
-            if (resp > 0){
-                Toast.makeText(this, "Registro guardado", Toast.LENGTH_SHORT).show();
-                Limpiar_campos();
-            }
-            else
-                Toast.makeText(this, "Error guardando registro", Toast.LENGTH_SHORT).show();
+                if (sw == 0) {
+                    resp = db.insert("TblVehiculo", null, registro);
+                } else {
+                    resp = db.update("TblVehiculo", registro, "placa='" + placa + "'", null);
+                    sw = 0;
+                }
+
+                if (resp > 0) {
+                    Toast.makeText(this, "Registro guardado", Toast.LENGTH_SHORT).show();
+                    Limpiar_campos();
+                }
+                else{
+                    Toast.makeText(this, "Error guardando registro", Toast.LENGTH_SHORT).show();}
             db.close();
         }
-
     }
 
     public void Consultar(View view){
