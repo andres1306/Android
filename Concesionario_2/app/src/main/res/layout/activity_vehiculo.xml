@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VehiculoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generar Automovil"
+            android:layout_gravity="center"
+            android:textSize="35dp"
+            android:layout_marginBottom="50dp"
+            android:textColor="@color/teal_700"/>
+
+        <EditText
+            android:id="@+id/etplaca"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="Digite el numero de placa"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etmarca"
+            android:hint="Digite la marca"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etmodelo"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:hint="Digite el modelo"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etvalor"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:hint="Digite el valor"
+            android:layout_gravity="center"/>
+
+        <CheckBox
+            android:id="@+id/cbactivo"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:text="Activo" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btguardar"
+            android:onClick="Guardar"
+            android:layout_marginLeft="50dp"
+            android:text="Guardar"/>
+        <Button
+            android:id="@+id/btconsultar"
+            android:layout_width="150dp"
+            android:onClick="Consultar"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:text="consultar"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btanular"
+            android:onClick="Anular"
+            android:layout_marginLeft="50dp"
+            android:text="Anular"/>
+        <Button
+            android:id="@+id/btcancelar"
+            android:layout_width="150dp"
+            android:onClick="Cancelar"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:text="Cancelar"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btregresar"
+            android:text="Regresar"
+            android:onClick="Regresar"
+            android:layout_marginLeft="150dp"/>
+    </LinearLayout>
+
+</LinearLayout>
